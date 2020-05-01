@@ -1,0 +1,3 @@
+mysql>create database testing;
+mysql>create table registration(fname varchar(20),lname varchar(20),dob varchar(20),contact int,uname varchar(20),easy int,medium int,hard int);
+mysql>use testing ;

@@ -1,0 +1,749 @@
+package com.myproject.UI;
+
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextField;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.JOptionPane;
+public class C6 {
+
+	private JFrame frame;
+	private JTextField txtT_2;
+	private JTextField txtM;
+	private JTextField txtR;
+	private JTextField txtL;
+	private JTextField txtT;
+	private JTextField txtA;
+	private JTextField txtN;
+	private JTextField txtS;
+	private JTextField txtP;
+	private JTextField txtO;
+	private JTextField txtR_1;
+	private JTextField txtT_1;
+	private JTextField txtC;
+	private JTextField txtH;
+	private JTextField txtI;
+	private JTextField txtR_2;
+	private JTextField txtK;
+	private JTextField txtA_1;
+	private JTextField txtX;
+	private JTextField txtI_1;
+	private JButton button;
+	private JButton button_1;
+	private JLabel label;
+	private JLabel label_1;
+	private JLabel label_2;
+	private JLabel label_3;
+	private JLabel label_4;
+	private JLabel label_5;
+	private JLabel label_6;
+	private JLabel label_7;
+	private JLabel label_8;
+	private JLabel label_9;
+	private JLabel lblNewLabel;
+	private JLabel lblL;
+	private JPanel panel;
+	private JTextField textField_2;
+	private JTextField textField_1;
+	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTextField textField_7;
+	private JTextField textField_11;
+	private JTextField textField_12;
+	private JTextField textField_6;
+	private JTextField textField_13;
+	private JTextField textField_14;
+	private JTextField textField_15;
+	private JTextField textField_16;
+	private JTextField textField_17;
+	private JTextField textField_18;
+	private JTextField textField_19;
+	private JTextField textField;
+	private JTextField textField_3;
+	private JTextField textField_8;
+	private JTextField textField_9;
+	private JTextField textField_20;
+	private JTextField textField_21;
+	private JTextField textField_22;
+	private JTextField textField_23;
+	private JTextField textField_10;
+	private JTextField textField_24;
+	private JTextField textField_25;
+	private JTextField textField_26;
+	private JTextField textField_27;
+	private JTextField textField_28;
+	private JTextField textField_29;
+	private JTextField textField_30;
+	private JTextField textField_31;
+	private JTextField textField_32;
+	private JTextField textField_33;
+	private JTextField textField_34;
+	private JTextField textField_35;
+	private JTextField textField_36;
+	private JTextField textField_37;
+	private JTextField textField_38;
+	private JTextField textField_39;
+	private JTextField textField_40;
+	private JTextField textField_41;
+
+        int score=300;
+    Thread ProgressUpdate=new Thread()
+    {
+      public void run()
+      {
+    	  int time=300;//1 min=60 seconds
+    	  for(int i=0;i<=time;i++)
+    	  {
+    		try {
+    			  Thread.sleep(1000);//Thread is made to sleep for 1 sec
+    		}catch(Exception ex){}
+    		progressBar.setValue(100*i/300);
+    		score--;
+    		if(progressBar.getValue()==100)
+    		{
+    		  JOptionPane.showMessageDialog(null,"....Times UP!..."+"Your Score is"+score);
+    		  frame.dispose();
+    		}
+    	  }
+      }
+    };
+    private JProgressBar progressBar;
+    private JTextField username;
+    
+
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					C6 window = new C6();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public C6() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.WHITE);
+		frame.setBounds(100, 100, 1560, 1080);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		txtT_2 = new JTextField();
+		txtT_2.setEnabled(false);
+		txtT_2.setText(" T");
+		txtT_2.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtT_2.setColumns(10);
+		txtT_2.setBackground(Color.WHITE);
+		txtT_2.setBounds(166, 44, 42, 42);
+		frame.getContentPane().add(txtT_2);
+		
+		txtM = new JTextField();
+		txtM.setEnabled(false);
+		txtM.setText(" M");
+		txtM.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtM.setColumns(10);
+		txtM.setBackground(Color.WHITE);
+		txtM.setBounds(292, 44, 42, 42);
+		frame.getContentPane().add(txtM);
+		
+		txtR = new JTextField();
+		txtR.setEnabled(false);
+		txtR.setText(" R");
+		txtR.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtR.setColumns(10);
+		txtR.setBackground(Color.WHITE);
+		txtR.setBounds(251, 128, 42, 42);
+		frame.getContentPane().add(txtR);
+		
+		txtL = new JTextField();
+		txtL.setEnabled(false);
+		txtL.setText(" L");
+		txtL.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtL.setColumns(10);
+		txtL.setBackground(Color.WHITE);
+		txtL.setBounds(251, 210, 42, 42);
+		frame.getContentPane().add(txtL);
+		
+		txtT = new JTextField();
+		txtT.setEnabled(false);
+		txtT.setText(" T");
+		txtT.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtT.setColumns(10);
+		txtT.setBackground(Color.WHITE);
+		txtT.setBounds(208, 128, 42, 42);
+		frame.getContentPane().add(txtT);
+		
+		txtA = new JTextField();
+		txtA.setEnabled(false);
+		txtA.setText(" A");
+		txtA.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtA.setColumns(10);
+		txtA.setBackground(Color.WHITE);
+		txtA.setBounds(292, 128, 42, 42);
+		frame.getContentPane().add(txtA);
+		
+		txtN = new JTextField();
+		txtN.setEnabled(false);
+		txtN.setText(" N");
+		txtN.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtN.setColumns(10);
+		txtN.setBackground(Color.WHITE);
+		txtN.setBounds(334, 129, 42, 42);
+		frame.getContentPane().add(txtN);
+		
+		txtS = new JTextField();
+		txtS.setEnabled(false);
+		txtS.setText(" S");
+		txtS.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtS.setColumns(10);
+		txtS.setBackground(Color.WHITE);
+		txtS.setBounds(377, 128, 42, 42);
+		frame.getContentPane().add(txtS);
+		
+		txtP = new JTextField();
+		txtP.setEnabled(false);
+		txtP.setText(" P");
+		txtP.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtP.setColumns(10);
+		txtP.setBackground(Color.WHITE);
+		txtP.setBounds(419, 128, 42, 42);
+		frame.getContentPane().add(txtP);
+		
+		txtO = new JTextField();
+		txtO.setEnabled(false);
+		txtO.setText(" O");
+		txtO.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtO.setColumns(10);
+		txtO.setBackground(Color.WHITE);
+		txtO.setBounds(461, 128, 42, 42);
+		frame.getContentPane().add(txtO);
+		
+		txtR_1 = new JTextField();
+		txtR_1.setEnabled(false);
+		txtR_1.setText(" R");
+		txtR_1.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtR_1.setColumns(10);
+		txtR_1.setBackground(Color.WHITE);
+		txtR_1.setBounds(504, 128, 42, 42);
+		frame.getContentPane().add(txtR_1);
+		
+		txtT_1 = new JTextField();
+		txtT_1.setEnabled(false);
+		txtT_1.setText(" T");
+		txtT_1.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtT_1.setColumns(10);
+		txtT_1.setBackground(Color.WHITE);
+		txtT_1.setBounds(547, 128, 42, 42);
+		frame.getContentPane().add(txtT_1);
+		
+		txtC = new JTextField();
+		txtC.setEnabled(false);
+		txtC.setText(" C");
+		txtC.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtC.setColumns(10);
+		txtC.setBackground(Color.WHITE);
+		txtC.setBounds(125, 210, 42, 42);
+		frame.getContentPane().add(txtC);
+		
+		txtH = new JTextField();
+		txtH.setEnabled(false);
+		txtH.setText(" H");
+		txtH.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtH.setColumns(10);
+		txtH.setBackground(Color.WHITE);
+		txtH.setBounds(208, 336, 42, 42);
+		frame.getContentPane().add(txtH);
+		
+		txtI_1 = new JTextField();
+		txtI_1.setEnabled(false);
+		txtI_1.setText(" I");
+		txtI_1.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtI_1.setColumns(10);
+		txtI_1.setBackground(Color.WHITE);
+		txtI_1.setBounds(504, 210, 42, 42);
+		frame.getContentPane().add(txtI_1);
+		
+		
+		button = new JButton("FINISH");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				  
+				   String f1="T"+textField_1.getText()+textField_2.getText()+"M";
+				   
+				   String f2=textField_2.getText()+textField_4.getText()+"R"+textField_6.getText()+"L"+textField_8.getText()+textField_9.getText()+textField_10.getText();
+				   
+				   String f3=textField_5.getText()+textField_7.getText()+"S";
+				   
+				   String f4="C"+textField_13.getText()+textField_14.getText()+"L"+textField_15.getText();
+				  
+				   String f5="C"+textField.getText()+textField_3.getText();
+				  
+				   String f6=textField_11.getText()+"R"+textField_12.getText()+"I"+textField_19.getText();
+				  
+				   String f7="H"+textField_10.getText()+textField_24.getText()+"I"+textField_25.getText()+textField_26.getText()+textField_27.getText()+textField_28.getText()+textField_29.getText()+"R";
+				  
+				   String f8=textField_21.getText()+textField_22.getText()+"X"+textField_23.getText();
+				  
+				   String f9=textField_21.getText()+"R"+textField_39.getText()+textField_40.getText()+textField_41.getText();
+				  
+				   String f10=textField_20.getText()+"I"+textField_30.getText()+"K"+textField_34.getText()+textField_35.getText()+"A"+textField_38.getText();
+				  
+				   String f11=textField_33.getText()+textField_32.getText()+"K"+textField_31.getText();
+				  
+				   String f12=textField_37.getText()+"A"+textField_36.getText();
+				  
+				   String f13=textField_16.getText()+textField_17.getText()+"I"+textField_18.getText();
+					
+					
+				   if(f1.equals("TRAM") && f2.equals("AIRPLANE") && f3.equals("BUS") && f4.equals("CYCLE") && f5.equals("CAR") && f6.equals("TRAIN") && f7.equals("HELICOPTER") && f8.equals("TAXI") && f9.equals("TRUCK") && f10.equals("RICKSHAW") && f11.equals("BIKE") && f12.equals("VAN") && f13.equals("SHIP"))				  
+				   {
+					  
+					   
+					   JOptionPane.showMessageDialog(null,"Congratulations. You've completed the puzzle!");
+						frame.dispose();
+						
+				   }
+				   else
+					{
+						JOptionPane.showMessageDialog(null,"Wrong Answers!");
+						
+					}
+			}
+		});
+		
+		button.setFont(new Font("Tahoma", Font.BOLD, 24));
+		button.setBounds(294, 689, 179, 42);
+		frame.getContentPane().add(button);
+		
+		button_1 = new JButton("GIVE UP!");
+		button_1.setFont(new Font("Tahoma", Font.BOLD, 24));
+		button_1.setBounds(636, 689, 167, 42);
+		frame.getContentPane().add(button_1);
+		
+		label = new JLabel("1");
+		label.setBounds(139, 58, 15, 16);
+		frame.getContentPane().add(label);
+		
+		label_1 = new JLabel("2");
+		label_1.setBounds(391, 15, 15, 16);
+		frame.getContentPane().add(label_1);
+		
+		label_2 = new JLabel("3");
+		label_2.setBounds(510, 58, 15, 16);
+		frame.getContentPane().add(label_2);
+		
+		label_3 = new JLabel("4");
+		label_3.setBounds(108, 210, 15, 16);
+		frame.getContentPane().add(label_3);
+		
+		label_4 = new JLabel("5");
+		label_4.setBounds(404, 224, 15, 16);
+		frame.getContentPane().add(label_4);
+		
+		label_5 = new JLabel("6");
+		label_5.setBounds(193, 349, 15, 16);
+		frame.getContentPane().add(label_5);
+		
+		label_6 = new JLabel("7");
+		label_6.setBounds(344, 279, 15, 16);
+		frame.getContentPane().add(label_6);
+		
+		label_7 = new JLabel("8");
+		label_7.setBounds(567, 296, 15, 16);
+		frame.getContentPane().add(label_7);
+		
+		label_8 = new JLabel("9");
+		label_8.setBounds(230, 435, 15, 16);
+		frame.getContentPane().add(label_8);
+		
+		label_9 = new JLabel("10");
+		label_9.setBounds(271, 562, 15, 16);
+		frame.getContentPane().add(label_9);
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Manasi Malkar\\Documents\\IMG_20180812_165035.jpg"));
+		lblNewLabel.setBounds(801, 15, 382, 307);
+		frame.getContentPane().add(lblNewLabel);
+		
+		lblL = new JLabel("l");
+		lblL.setIcon(new ImageIcon("C:\\Users\\Manasi Malkar\\Documents\\IMG_20180812_165047.jpg"));
+		lblL.setBounds(801, 349, 496, 220);
+		frame.getContentPane().add(lblL);
+		
+		panel = new JPanel();
+		panel.setBounds(0, 0, 1542, 1033);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		textField_2 = new JTextField();
+		textField_2.setDocument(new JTextFieldCharLimits(1));
+		textField_2.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_2.setColumns(10);
+		textField_2.setBounds(250, 43, 42, 42);
+		panel.add(textField_2);
+		
+		textField_1 = new JTextField();
+		textField_1.setDocument(new JTextFieldCharLimits(1));
+		textField_1.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_1.setColumns(10);
+		textField_1.setBounds(208, 43, 42, 42);
+		panel.add(textField_1);
+		
+		textField_4 = new JTextField();
+		textField_4.setDocument(new JTextFieldCharLimits(1));
+		textField_4.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_4.setColumns(10);
+		textField_4.setBounds(250, 86, 42, 42);
+		panel.add(textField_4);
+		
+		textField_5 = new JTextField();
+		textField_8.setDocument(new JTextFieldCharLimits(1));
+		textField_5.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_5.setColumns(10);
+		textField_5.setBounds(377, 43, 42, 42);
+		panel.add(textField_5);
+		
+		textField_7 = new JTextField();
+		textField_7.setDocument(new JTextFieldCharLimits(1));
+		textField_7.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_7.setColumns(10);
+		textField_7.setBounds(377, 86, 42, 42);
+		panel.add(textField_7);
+		
+		textField_11 = new JTextField();
+		textField_11.setDocument(new JTextFieldCharLimits(1));
+		textField_11.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_11.setColumns(10);
+		textField_11.setBounds(503, 86, 42, 42);
+		panel.add(textField_11);
+		
+		textField_12 = new JTextField();
+		textField_12.setDocument(new JTextFieldCharLimits(1));
+		textField_12.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_12.setColumns(10);
+		textField_12.setBounds(503, 169, 42, 42);
+		panel.add(textField_12);
+		
+		textField_6 = new JTextField();
+		textField_6.setDocument(new JTextFieldCharLimits(1));
+		textField_6.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_6.setColumns(10);
+		textField_6.setBounds(250, 169, 42, 42);
+		panel.add(textField_6);
+		
+		textField_13 = new JTextField();
+		textField_13.setDocument(new JTextFieldCharLimits(1));
+		textField_13.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_13.setColumns(10);
+		textField_13.setBounds(166, 210, 42, 42);
+		panel.add(textField_13);
+		
+		textField_14 = new JTextField();
+		textField_14.setDocument(new JTextFieldCharLimits(1));
+		textField_14.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_14.setColumns(10);
+		textField_14.setBounds(208, 210, 42, 42);
+		panel.add(textField_14);
+		
+		textField_15 = new JTextField();
+		textField_15.setDocument(new JTextFieldCharLimits(1));
+		textField_15.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_15.setColumns(10);
+		textField_15.setBounds(293, 210, 42, 42);
+		panel.add(textField_15);
+		
+		textField_16 = new JTextField();
+		textField_16.setDocument(new JTextFieldCharLimits(1));
+		textField_16.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_16.setColumns(10);
+		textField_16.setBounds(418, 210, 42, 42);
+		panel.add(textField_16);
+		
+		textField_17 = new JTextField();
+		textField_17.setDocument(new JTextFieldCharLimits(1));
+		textField_17.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_17.setColumns(10);
+		textField_17.setBounds(462, 210, 42, 42);
+		panel.add(textField_17);
+		
+		textField_18 = new JTextField();
+		textField_18.setDocument(new JTextFieldCharLimits(1));
+		textField_18.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_18.setColumns(10);
+		textField_18.setBounds(547, 210, 42, 42);
+		panel.add(textField_18);
+		
+		textField_19 = new JTextField();
+		textField_19.setDocument(new JTextFieldCharLimits(1));
+		textField_19.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_19.setColumns(10);
+		textField_19.setBounds(503, 251, 42, 42);
+		panel.add(textField_19);
+		
+		textField = new JTextField();
+		textField.setDocument(new JTextFieldCharLimits(1));
+		textField.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField.setColumns(10);
+		textField.setBounds(125, 251, 42, 42);
+		panel.add(textField);
+		
+		textField_3 = new JTextField();
+		textField_3.setDocument(new JTextFieldCharLimits(1));
+		textField_3.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_3.setColumns(10);
+		textField_3.setBounds(125, 292, 42, 42);
+		panel.add(textField_3);
+		
+		textField_8 = new JTextField();
+		textField_8.setDocument(new JTextFieldCharLimits(1));
+		textField_8.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_8.setColumns(10);
+		textField_8.setBounds(250, 251, 42, 42);
+		panel.add(textField_8);
+		
+		textField_9 = new JTextField();
+		textField_9.setDocument(new JTextFieldCharLimits(1));
+		textField_9.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_9.setColumns(10);
+		textField_9.setBounds(250, 292, 42, 42);
+		panel.add(textField_9);
+		
+		textField_20 = new JTextField();
+		textField_20.setDocument(new JTextFieldCharLimits(1));
+		textField_20.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_20.setColumns(10);
+		textField_20.setBounds(335, 292, 42, 42);
+		panel.add(textField_20);
+		
+		textField_21 = new JTextField();
+		textField_21.setDocument(new JTextFieldCharLimits(1));
+		textField_21.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_21.setColumns(10);
+		textField_21.setBounds(589, 292, 42, 42);
+		panel.add(textField_21);
+		
+		textField_22 = new JTextField();
+		textField_22.setDocument(new JTextFieldCharLimits(1));
+		textField_22.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_22.setColumns(10);
+		textField_22.setBounds(630, 292, 42, 42);
+		panel.add(textField_22);
+		
+		txtX = new JTextField();
+		txtX.setBounds(674, 292, 42, 42);
+		panel.add(txtX);
+		txtX.setEnabled(false);
+		txtX.setText(" X");
+		txtX.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtX.setColumns(10);
+		txtX.setBackground(Color.WHITE);
+		
+		textField_23 = new JTextField();
+		textField_23.setDocument(new JTextFieldCharLimits(1));
+		textField_23.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_23.setColumns(10);
+		textField_23.setBounds(716, 292, 42, 42);
+		panel.add(textField_23);
+		
+		textField_10 = new JTextField();
+		textField_10.setDocument(new JTextFieldCharLimits(1));
+		textField_10.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_10.setColumns(10);
+		textField_10.setBounds(250, 334, 42, 42);
+		panel.add(textField_10);
+		
+		textField_24 = new JTextField();
+		textField_24.setDocument(new JTextFieldCharLimits(1));
+		textField_24.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_24.setColumns(10);
+		textField_24.setBounds(293, 334, 42, 42);
+		panel.add(textField_24);
+		
+		txtI = new JTextField();
+		txtI.setBounds(335, 334, 42, 42);
+		panel.add(txtI);
+		txtI.setEnabled(false);
+		txtI.setText(" I");
+		txtI.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtI.setColumns(10);
+		txtI.setBackground(Color.WHITE);
+		
+		textField_25 = new JTextField();
+		textField_25.setDocument(new JTextFieldCharLimits(1));
+		textField_25.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_25.setColumns(10);
+		textField_25.setBounds(377, 334, 42, 42);
+		panel.add(textField_25);
+		
+		textField_26 = new JTextField();
+		textField_26.setDocument(new JTextFieldCharLimits(1));
+		textField_26.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_26.setColumns(10);
+		textField_26.setBounds(418, 334, 42, 42);
+		panel.add(textField_26);
+		
+		textField_27 = new JTextField();
+		textField_27.setDocument(new JTextFieldCharLimits(1));
+		textField_27.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_27.setColumns(10);
+		textField_27.setBounds(462, 334, 42, 42);
+		panel.add(textField_27);
+		
+		textField_28 = new JTextField();
+		textField_28.setDocument(new JTextFieldCharLimits(1));
+		textField_28.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_28.setColumns(10);
+		textField_28.setBounds(503, 334, 42, 42);
+		panel.add(textField_28);
+		
+		textField_29 = new JTextField();
+		textField_29.setDocument(new JTextFieldCharLimits(1));
+		textField_29.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_29.setColumns(10);
+		textField_29.setBounds(547, 334, 42, 42);
+		panel.add(textField_29);
+		
+		txtR_2 = new JTextField();
+		txtR_2.setBounds(589, 334, 42, 42);
+		panel.add(txtR_2);
+		txtR_2.setEnabled(false);
+		txtR_2.setText(" R");
+		txtR_2.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtR_2.setColumns(10);
+		txtR_2.setBackground(Color.WHITE);
+		
+		textField_30 = new JTextField();
+		textField_30.setDocument(new JTextFieldCharLimits(1));
+		textField_30.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_30.setColumns(10);
+		textField_30.setBounds(335, 376, 42, 42);
+		panel.add(textField_30);
+		
+		txtK = new JTextField();
+		txtK.setBounds(335, 416, 42, 42);
+		panel.add(txtK);
+		txtK.setEnabled(false);
+		txtK.setText(" K");
+		txtK.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtK.setColumns(10);
+		txtK.setBackground(Color.WHITE);
+		
+		textField_31 = new JTextField();
+		textField_31.setDocument(new JTextFieldCharLimits(1));
+		textField_31.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_31.setColumns(10);
+		textField_31.setBounds(377, 416, 42, 42);
+		panel.add(textField_31);
+		
+		textField_32 = new JTextField();
+		textField_32.setDocument(new JTextFieldCharLimits(1));
+		textField_32.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_32.setColumns(10);
+		textField_32.setBounds(293, 416, 42, 42);
+		panel.add(textField_32);
+		
+		textField_33 = new JTextField();
+		textField_33.setDocument(new JTextFieldCharLimits(1));
+		textField_33.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_33.setColumns(10);
+		textField_33.setBounds(250, 416, 42, 42);
+		panel.add(textField_33);
+		
+		textField_34 = new JTextField();
+		textField_34.setDocument(new JTextFieldCharLimits(1));
+		textField_34.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_34.setColumns(10);
+		textField_34.setBounds(335, 457, 42, 42);
+		panel.add(textField_34);
+		
+		textField_35 = new JTextField();
+		textField_35.setDocument(new JTextFieldCharLimits(1));
+		textField_35.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_35.setColumns(10);
+		textField_35.setBounds(335, 499, 42, 42);
+		panel.add(textField_35);
+		
+		txtA_1 = new JTextField();
+		txtA_1.setBounds(335, 541, 42, 42);
+		panel.add(txtA_1);
+		txtA_1.setEnabled(false);
+		txtA_1.setText(" A");
+		txtA_1.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		txtA_1.setColumns(10);
+		txtA_1.setBackground(Color.WHITE);
+		
+		textField_36 = new JTextField();
+		textField_36.setDocument(new JTextFieldCharLimits(1));
+		textField_36.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_36.setColumns(10);
+		textField_36.setBounds(377, 541, 42, 42);
+		panel.add(textField_36);
+		
+		textField_37 = new JTextField();
+		textField_37.setDocument(new JTextFieldCharLimits(1));
+		textField_37.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_37.setColumns(10);
+		textField_37.setBounds(293, 541, 42, 42);
+		panel.add(textField_37);
+		
+		textField_38 = new JTextField();
+		textField_38.setDocument(new JTextFieldCharLimits(1));
+		textField_38.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_38.setColumns(10);
+		textField_38.setBounds(335, 583, 42, 42);
+		panel.add(textField_38);
+		
+		textField_39 = new JTextField();
+		textField_39.setDocument(new JTextFieldCharLimits(1));
+		textField_39.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_39.setColumns(10);
+		textField_39.setBounds(589, 376, 42, 42);
+		panel.add(textField_39);
+		
+		textField_40 = new JTextField();
+		textField_40.setDocument(new JTextFieldCharLimits(1));
+		textField_40.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_40.setColumns(10);
+		textField_40.setBounds(589, 416, 42, 42);
+		panel.add(textField_40);
+		
+		textField_41 = new JTextField();
+		textField_41.setDocument(new JTextFieldCharLimits(1));
+		textField_41.setFont(new Font("Perpetua Titling MT", Font.BOLD, 24));
+		textField_41.setColumns(10);
+		textField_41.setBounds(589, 457, 42, 42);
+		panel.add(textField_41);
+			
+		}
+		
+	}
+
+	
+
